@@ -22,7 +22,7 @@ This project shows how to inject Unity modules during runtime into il2cpp Unity 
  - App that does the injection is just a simple winform - need to clean this up.
 
 ## Credits
-https://github.com/shalzuth/AutoGunfireReborn - code i based this on
+https://github.com/shalzuth/AutoGunfireReborn - original code
 
 https://github.com/Perfare/Il2CppDumper - dumps out dummy DLLs from Unity il2cpp game
 

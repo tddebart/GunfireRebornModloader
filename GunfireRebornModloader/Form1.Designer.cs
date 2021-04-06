@@ -1,4 +1,4 @@
-﻿namespace AutoGunfireReborn
+﻿namespace GunfireRebornModloader
 {
     partial class Form1
     {

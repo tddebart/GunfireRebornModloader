@@ -14,12 +14,15 @@ namespace GunfireRebornMods
             foreach (var mod in Mods)
                 if (mod.Enabled) mod.OnGUI();
             if (Cursor.lockState == CursorLockMode.Locked) return;
-            var area = new Rect(25, 25, 150, 250);
+            Rect area = new Rect(0, 25, 150, 800);
+            //area.yMax = 700;
             GUI.Box(area, "shalzuth's mods");
             GUILayout.BeginArea(area);
-            GUILayout.Space(12);
+            GUILayout.BeginVertical(new GUILayoutOption[0]);
+            GUILayout.Space(40);
             foreach (var mod in Mods)
             {
+                string Val = mod.SliderVal.ToString();
                 var val = GUILayout.Toggle(mod.Enabled, mod.GetType().Name, new GUILayoutOption[0]);
                 if (val != mod.Enabled)
                 {
@@ -28,11 +31,15 @@ namespace GunfireRebornMods
                     mod.Enabled = val;
                 }
                 if (mod.Enabled && mod.HasConfig)
+                {
+                    GUILayout.TextField(Val, 5, new GUILayoutOption[0]);
                     mod.SliderVal = GUILayout.DoHorizontalSlider(mod.SliderVal, mod.SliderMin, mod.SliderMax, new GUIStyle(GUI.skin.horizontalSlider), new GUIStyle(GUI.skin.horizontalSliderThumb), new GUILayoutOption[0]);
+                }
                 if (mod.Enabled)
                     mod.OnGUI();
             }
-            GUILayout.EndArea();
+            GUILayout.EndVertical();
+            //GUILayout.EndArea();
         }
         void Update()
         {

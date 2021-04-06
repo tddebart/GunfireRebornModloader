@@ -9,7 +9,7 @@ using System.IO.Compression;
 using System.Reflection;
 using Mono.Cecil;
 
-namespace AutoGunfireReborn
+namespace GunfireRebornModloader
 {
     public partial class Form1 : Form
     {

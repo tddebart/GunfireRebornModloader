@@ -21,7 +21,7 @@ namespace GunfireRebornMods
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
-            var f = 0.0f;
+            //var f = 0.0f;
             var p = GetBaseInput();
             p = p * mainSpeed;
             p = p * Time.deltaTime;

@@ -1,4 +1,4 @@
-# AutoGunfireReborn
+# GunfireRebornModloader
 A tool that adds easy mode to Gunfire Reborn.
 
 This project shows how to inject Unity modules during runtime into il2cpp Unity games.
@@ -13,7 +13,7 @@ This project shows how to inject Unity modules during runtime into il2cpp Unity 
  - UnlimitedAmmo - no need to reload or find ammo anymore.
  - UnlockAll - not functional yet. Goal is to unlock all weapons/scrolls/etc., but this is server-sided for the most part.
  - WeaponMod - not functional. Currently only adds map-wide AOE range to explosive weapons.
- 
+
 ## Todo / current issues
  - Occasionally crashes on injection
  - Deployment / packaging requries lots of DLL's, would be nice to have a single exe. Fody doesn't work as is.
@@ -22,6 +22,8 @@ This project shows how to inject Unity modules during runtime into il2cpp Unity 
  - App that does the injection is just a simple winform - need to clean this up.
 
 ## Credits
+https://github.com/shalzuth/AutoGunfireReborn - code i based this on
+
 https://github.com/Perfare/Il2CppDumper - dumps out dummy DLLs from Unity il2cpp game
 
 https://github.com/knah/Il2CppAssemblyUnhollower - converts dummy DLLs from Il2CppDumper into native calls. knah also helped me debug along the way
